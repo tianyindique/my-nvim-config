@@ -30,3 +30,11 @@ vim.opt.wildmode = {"longest:full", "full"}
 vim.keymap.set('n', 'H', '0', { noremap = true })
 vim.keymap.set('n', 'L', '$', { noremap = true })
 
+-- Set the conceallevel for Obsidian.md
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.wo.conceallevel = 2
+  end,
+})
+
