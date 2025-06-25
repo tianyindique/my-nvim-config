@@ -18,6 +18,15 @@ return {
             },
         },
       })
+
+      -- 禁用 markdown 文件中的 <CR> 增量选择映射
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = "markdown",
+        callback = function()
+          vim.keymap.set({ "n", "x" }, "<CR>", "<CR>", { buffer = true })
+        end,
+      })
     end,
   }
 }
+
