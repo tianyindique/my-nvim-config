@@ -29,6 +29,10 @@ vim.opt.wildmode = {"longest:full", "full"}
 -- Set Keymap
 vim.keymap.set('n', 'H', '0', { noremap = true })
 vim.keymap.set('n', 'L', '$', { noremap = true })
+vim.keymap.set('i', 'jk', '<Esc>')
+vim.keymap.set('i', 'kj', '<Esc>')
+vim.keymap.set('i', 'jj', '<Esc>')
+
 
 -- Set the conceallevel for Obsidian.md
 vim.api.nvim_create_autocmd("FileType", {
