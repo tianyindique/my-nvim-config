@@ -63,3 +63,6 @@ vim.keymap.set("i", "kk", "<Esc>")
 vim.keymap.set("n", "<C-s>", ":w<CR>", { silent = true })
 vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>a", { silent = true })
 vim.keymap.set("n", "<C-q>", ":q<CR>", { silent = true })
+
+-- Set q to exit
+vim.keymap.set("n", "q", ":q<CR>", { noremap = true, silent = true })
