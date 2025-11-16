@@ -25,7 +25,12 @@ vim.api.nvim_create_autocmd("VimEnter", {
 })
 
 -- Enable autosave when editing html,css,js,jsx,markdwon
+vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
+	pattern = { "*.js", "*.jsx", "*.html", "*.css" },
+	command = "silent! w",
+})
+
 vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged", "TextChangedI", "TextChangedP" }, {
-	pattern = { "*.js", "*.jsx", "*.html", "*.css", "*.markdown" },
+	pattern = { "*.markdown" },
 	command = "silent! w",
 })
